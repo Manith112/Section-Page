@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+:root{
+   --Very-Dark-Magenta: hsl(300, 43%, 22%);
+--Soft-Pink: hsl(333, 80%, 67%);
+--Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+--Light-Grayish-Magenta: hsl(300, 24%, 96%);
+--White: hsl(0, 0%, 100%)
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+}
+body{
+    background-color: var(--White);
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    display: flex;
+    margin: auto 150px;
+    flex-direction: column;
+    background: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top left -100px, bottom 100px right -300px;
+}
+.first {
+    display: flex;
+    justify-content: space-between;
+    opacity: 0; /* Initial state before the animation starts */
+    animation: fadeIn 2s ease-in-out forwards; /* Animation settings */
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.left{
+    width: 50%;
+}
+.left > h2 {
+    color: var(--Very-Dark-Magenta);
+    font-size: 40px;
+    font-weight: 800;
+    width: 70%;
+    line-height: 35px;
+}
+.left > p {
+    color: var(--Dark-Grayish-Magenta);
+    font-weight: 600;
+    padding-top: 20px;
+    width: 90%;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+}
+.box{
+    width: 450px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 15px 50px 15px 20px;
+    display: flex;
+    gap: 20px;
+    background-color: var(--Light-Grayish-Magenta);
+}
+.box > ul {
+    gap: 10px;
+    display: flex;
+    margin: auto;
+}
+.box > p{
+    color: var(--Very-Dark-Magenta);
+    font-weight: 800;
+}
+.review {
+    margin-left: 100px;
+}
+.guru{
+    margin-left: 40px;
+}
+.boxes{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    opacity: 0; /* Initial state before the animation starts */
+    animation: fadeIn 2s ease-in-out forwards; /* Animation settings */
+    animation-delay: 2s;
+}
+.content{
+    background-color: var(--Very-Dark-Magenta);
+    padding: 40px 30px;
+    border-radius: 5px;
+    height: 230px;
+}
+.irene {
+    margin-top: 20px;
+}
+.anne{
+    margin-top: 40px;
+}
+.pf{
+    display: flex;
+    gap: 20px;
+}
+.pf > img {
+    border-radius: 50%;
+    width: 40px;
+}
+.name > p{
+    color: var(--White);
+    font-weight: 700;
+}
+.name > span {
+    color: var(--Soft-Pink);
+}
+.content > p{
+    color: var(--White);
+    padding-top: 10px;
+    line-height: 25px;
+    font-size: 14px;
+}
+@media screen and (max-width: 1250px){
+    .left > h2, .left > p{
+        width: 100%;
+    }
+   body{
+    margin: auto 100px;
+   }
+}
+@media screen and (max-width: 1100px){
+    body{
+        margin: auto 50px;
+       }
+}
+@media screen and (max-width: 1000px){
+    .content{
+        height: 250px;
+    }
+}
+@media screen and (max-width: 900px){
+    body{
+        margin: 100px 20px;
+       }
+   .first{
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+   }
+   .left {
+    width: auto;
+   }
+   .right{
+    margin-top: 40px;
+    width: 100%;
+   }
+   .box {
+    flex-direction: column;
+    width: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px ;
+   }
+   .review {
+    margin-left: 0px;
+}
+.guru{
+    margin-left: 0px;
+}
+.boxes{
+    flex-direction: column;
+    gap: 10px;
+}
+.content{
+    height: auto;
+}
+.irene {
+    margin-top: 0px;
+}
+.anne{
+    margin-top: 0px;
+}
+}
+@media screen and (max-width: 500px){
+    body{
+        background-position: top left -250px, bottom 100px right -500px;
+    }
+}
